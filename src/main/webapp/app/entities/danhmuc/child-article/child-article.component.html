@@ -1,0 +1,106 @@
+<script src="../../../../content/js/tinymce.min.js"></script>
+<div id="pcontTop">
+  <h2>DANH MỤC BÀI VIẾT</h2>
+</div>
+<div id="pcont-content">
+  <div class="container-fluid">
+    <div class="row" style="padding: 0 2% 0;">
+      <div class="col-md-3 col-sm-12 mb-2">
+        <div id="child-list">
+          <div class="bg-white radius card">
+            <div class="card-header p-2">
+              <h3 class="card-title mb-2" style="font-size: 18px !important;">DANH SÁCH BÀI VIẾT</h3>
+            </div>
+
+            <jhi-article-autocomplete
+              style="margin-left: 8%; width: 85%;"
+              (setArticleEvent)="setArticleName($event)"
+            ></jhi-article-autocomplete>
+
+            <mat-accordion>
+              <mat-expansion-panel
+                style="margin-bottom: 15px;"
+                as
+                *ngFor="let mainPost of listEntity; index as i"
+                [expanded]="step === i"
+                (opened)="setStep(i)"
+                (opened)="loadChildData(i)"
+              >
+                <mat-expansion-panel-header>
+                  <mat-panel-title style="display: flex; flex-direction: row; font-size: 18px; align-items: center;">
+                  <span id="main-post-title">{{ mainPost.name }} </span>
+
+                    <i
+                      class="fa fa-plus"
+                      aria-hidden="true"
+                      (click)="openCreateChildArticleModal(mainPost.id)"
+                      style="margin-left: 10px; font-size: 10px; color: #0056B3;"
+                    >
+                      Bài viết</i
+                    >
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ng-template matExpansionPanelContent>
+                  <div
+                    *ngFor="let childPost of mainPost.childList; let i = index"
+                    style="display: flex; flex-direction: row; align-items: center; margin-top: 10px;"
+                  >
+                    <button type="button" class="btn btn-link" (click)="goToPage(mainPost.id, childPost.id)">{{ childPost.name }}</button>
+
+                    <span style="margin-left: auto;">
+                      <button type="button" class="btn btn-primary btn-sm" (click)="openChildArticleModal(childPost)">
+                        Chỉnh sửa
+                      </button>
+                      <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteChildPost(childPost.id)">
+                        Xóa
+                      </button></span
+                    >
+                  </div>
+                  <div></div>
+                </ng-template>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+          <div class="bg-white radius card" style="margin-top: 20px;" *ngIf="searchElementList.length > 0">
+            <div class="card-header p-2">
+              <h3 class="card-title mb-2" style="font-size: 18px !important; font-weight: 700;">Tìm kiếm trùng khớp - <span style="text-transform: none;">{{this.params.searchphase}}</span></h3>
+            </div>
+
+            <div *ngFor="let element of searchElementList" style="padding: 0 12px;">
+              <button type="button" class="btn btn-link" (click)="goDownToSearchElement(element)">{{ element?.innerText }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 col-sm-12 mb-2" #editorRootNode>
+        <div
+          class="bg-white radius card"
+          style="padding: 0 1.2rem 1.2rem;
+        padding-top: 0.6rem;"
+        >
+          <editor #filePickerEditor [ngModel]="showContent" [disabled]="true" [init]="this.tinyMceSetting"></editor>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-12 mb-2">
+        <div class="bg-white radius card" id="table-of-content">
+          <div class="card-header p-2">
+            <h3 class="card-title mb-2" style="font-size: 18px !important; font-weight: 700;">Mục lục</h3>
+          </div>
+          <div style="padding-left: 10px;">
+            <jhi-app-tree-content
+              [hierarchicalList]="hierarchicalList"
+              (goDownToElement)="childGoDownToElement($event)"
+            ></jhi-app-tree-content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-danger btn-sm" (click)="goDownToSearchPhase('adsadsad')">
+    Test
+  </button>
+  <input #imageInput type="file" accept="image/*" style="display: none;" (change)="onFileInputChange($event)" />
+</div>

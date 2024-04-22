@@ -1,0 +1,77 @@
+<div>
+  <div class="modal-header">
+    <h5 class="modal-title" id="">Chi tiết POS</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="dismiss()">
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Mã máy POS</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.code"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Tên máy POS</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.name"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Địa chỉ IP</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.ipaddress"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">PORT</label>
+        <input type="number" class="form-control" [(ngModel)]="this.entity!.port"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Cấu hình máy POS</label>
+        <select class="form-control" [(ngModel)]="this.entity!.posprofile.id"
+          [attr.disabled]="editing ? null: 'disabled'">
+          <option *ngFor="let profile of listPosprofile, index as i" value="{{profile.id}}">{{profile.name}}
+          </option>
+        </select>
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">MerchantID</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.merchantid"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Trạng thái</label>
+        <select class="form-control" [(ngModel)]="this.entity!.status" [attr.disabled]="editing ? null: 'disabled'">
+          <option value="1">Hoạt động</option>
+          <option value="-1">Khóa</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="radius border">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-12 p-2">
+          &nbsp;
+          <button class="btn btn-primary" (click)="onEdit()" [attr.disabled]="!editing ? null: 'disabled'"><i
+              class="fas fa-edit"></i> Sửa</button>
+          <button class="btn btn-primary" (click)="saveEntity()" [attr.disabled]="editing ? null: 'disabled'"><i
+              class="fas fa-save"></i> Lưu</button>
+          <button *ngIf="entity.id !== 0" class="btn btn-success" (click)="testConnection()"><i class="fas fa-plug"></i> Kiểm tra kết
+            nối</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div *ngIf="connectionStatus !== -1" class="radius border">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-12 p-2">
+          <span *ngIf="connectionStatus === 0" class="label label-success">Kết nối thành công</span>
+          <span *ngIf="connectionStatus === 1" class="btn btn-danger">Kết nối thất bại</span>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+</div>

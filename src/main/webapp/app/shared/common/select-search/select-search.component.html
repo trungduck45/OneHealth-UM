@@ -1,0 +1,6 @@
+<ng-select [disabled]="editing || creating ? false: true" 
+[(ngModel)]="selectedId"
+(change)="onChange($event)"
+>
+    <ng-option *ngFor="let e of entities" [value]="e.id">{{e.name}}</ng-option>
+ </ng-select>

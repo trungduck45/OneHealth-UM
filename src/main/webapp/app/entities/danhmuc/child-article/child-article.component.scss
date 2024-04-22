@@ -1,0 +1,48 @@
+b,
+::ng-deep strong {
+  font-weight: bold !important;
+}
+
+/* Add these styles in your component's CSS or in your global styles */
+
+/* Style for the mat-accordion */
+mat-accordion {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Style for the mat-expansion-panel */
+mat-expansion-panel {
+  padding-top: 15px;
+  margin-bottom: 18px;
+}
+
+/* Style for the mat-expansion-panel-header */
+mat-expansion-panel-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the mat-panel-title and mat-panel-description */
+mat-panel-title,
+mat-panel-description {
+  flex-grow: 1;
+}
+
+/* Custom styling for the tree-like structure */
+.mat-expansion-panel-header {
+  position: relative;
+}
+
+div#table-of-content {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 35px;
+}
+
+div#child-list {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 35px;
+}

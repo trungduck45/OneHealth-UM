@@ -1,0 +1,60 @@
+.dropdown-item {
+  cursor: pointer;
+}
+.text-white {
+  font-family: 'OpenSans-SemiBold';
+}
+.title:hover {
+  font-size: 16px;
+}
+@media screen and (max-width: 576px) {
+  .title {
+    display: none;
+  }
+  .dropdown-toggle {
+    .name {
+      display: none;
+    }
+  }
+  .rps-tk {
+    margin-left: -70px !important;
+    min-width: 100px !important;
+  }
+}
+@media screen and (min-width: 577px) {
+  .btn-bar2 {
+    display: none;
+  }
+}
+.vietnam a {
+  padding: 0.3rem 0;
+}
+.vietnam a:hover {
+  background-color: #0173b2 !important;
+}
+.vietnam img {
+  border: 1px solid white;
+}
+.vietnam img:active {
+  border: 1px solid #0173b2;
+}
+.english {
+  margin-left: 10px !important;
+}
+.english a {
+  padding: 0.3rem 0;
+}
+.english a:hover {
+  background-color: #0173b2 !important;
+}
+.english img {
+  border: 1px solid white;
+}
+.english img:active {
+  border: 1px solid #0173b2;
+}
+.dropdown-item:hover {
+  color: #16181b !important;
+  text-decoration: none;
+  background-color: #f3f6ff;
+}

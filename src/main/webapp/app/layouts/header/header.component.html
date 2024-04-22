@@ -1,0 +1,65 @@
+<header class="navbar navbar-expand flex-column">
+    <div class="container-fluid">
+        <button type="button" id="barToggle" class="btn-bar2" (click)="script()"><i class="fal fa-bars fa-2x"></i></button>
+        <a class="" routerLink="/home">
+            <span class="name title" style="font-size: large;font-weight: bolder;"><strong>App Document cho dự án & BA viết hướng dẫn nghiệp vụ</strong></span>
+        </a>
+        <ul class="navbar-nav ml-auto">
+         
+            <!-- <li class="nav-item vietnam">
+                <a class="dropdown-item"><img src="/content/img/vietnam_flag.png" /></a>
+            </li>
+            <li class="nav-item english">
+                <a class="dropdown-item"><img src="/content/img/english_flag.png" /></a>
+            </li> -->
+
+            <!-- <jhi-notification [notifications]="notifications"
+                [visible]="isShowNotification"
+                (closeNav)="hideMenu($event)"
+                (scrollReachBottom)="loadMoreNotifications()">
+            </jhi-notification> -->
+
+            <!-- <li class="nav-item dropdown" id="notice">
+                <a data-display="static" class="dropdown-toggle btn" type="button" id="notice-sub" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell circle"></i><sup>{{notificationCount}}</sup></a>
+                <div id="notice-scrollbar" data-scrollbar="" tabindex="1" style="overflow: hidden; outline: none;" class="dropdown-menu dropdown-menu-md-right" aria-labelledby="langue-sub">
+                    
+                    <article class="scroll-content"  >
+                        <article class="scroll-content" style="transform: translate3d(0px, 000px, 0px);">
+                            <canvas class="overscroll-glow" style="display: none; pointer-events: none;"></canvas>
+                            <ul class="m-0 p-0" (wheel)="handleScroll()" >
+
+                                <jhi-notification-item 
+                                *ngFor="let notification of notifications"
+                                [notification]="notification"
+                                (notiHasBeenReadTrigger)="reloadNotification()">
+                                </jhi-notification-item>
+                                
+                            </ul>
+                        </article>
+                    </article>
+                    <aside class="scrollbar-track scrollbar-track-x" style="display: none;">
+                        <div class="scrollbar-thumb scrollbar-thumb-x"></div>
+                    </aside>
+                    <aside class="scrollbar-track scrollbar-track-y" style="display: none;">
+                        <div class="scrollbar-thumb scrollbar-thumb-y"></div>
+                    </aside>
+                    <canvas class="overscroll-glow" style="display: none; pointer-events: none;"></canvas>
+                </div>
+            </li>
+             -->
+
+            
+
+            <!-- account infos -->
+            <li class="nav-item dropdown" id="accInfo">
+                <a class="dropdown-toggle" type="button" id="accInfo-sub" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="name">{{fullName}} | {{username}}</span> <img src="/content/img/avatar.jpg" /></a>
+                <ul class="dropdown-menu dropdown-menu-md-right rps-tk" aria-labelledby="accInfo-sub">
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item" (click)="logout()"><i class="fal fa-sign-out"></i> Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>

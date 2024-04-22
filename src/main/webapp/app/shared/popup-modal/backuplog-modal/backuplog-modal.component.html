@@ -1,0 +1,43 @@
+<div>
+  <div class="modal-header">
+    <h5 class="modal-title" id="">Chi tiết backup log</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="dismiss()">
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Nội dung</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.note"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Mã</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.code"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div> 
+      <div class="form-group col-md-4 col-sm-4 col-4">
+        <label for="" class="">Ngày tạo</label>
+        <input type="text" class="form-control" [(ngModel)]="this.entity!.backupDate"
+          [attr.disabled]="editing ? null: 'disabled'">
+      </div>   
+      <!-- <div class="form-group col-md-4 col-sm-4 col-4">
+            <label for="" class="">PORT</label>
+            <input type="number" class="form-control" [(ngModel)]="this.entity!.port" [attr.disabled]="editing ? null: 'disabled'">
+          </div> -->
+    </div>
+
+    <div class="radius border">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-12 p-2">
+          &nbsp;
+          <button class="btn btn-primary" (click)="onEdit()" [attr.disabled]="!editing ? null: 'disabled'"><i
+              class="fas fa-edit"></i> Sửa</button>
+          <button class="btn btn-primary" (click)="saveEntity()" [attr.disabled]="editing ? null: 'disabled'"><i
+              class="fas fa-save"></i> Lưu</button>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>

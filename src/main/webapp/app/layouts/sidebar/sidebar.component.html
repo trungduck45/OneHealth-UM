@@ -1,0 +1,57 @@
+<div id="sidebar">
+    <button type="button" id="barToggle" class="btn-bar"><i class="fal fa-bars fa-2x"></i></button>
+    <div id="menu-space">
+        <div id="cl-vnavigation">
+            <div id="inner-scrollbar" data-scrollbar="" tabindex="1" style="overflow: hidden; outline: none; padding-bottom: 0;" class="">
+                    <article class="scroll-content" style="transform: translate3d(0px, 0px, 0px); height: 219px;">
+                        <canvas class="overscroll-glow" style="display: none; pointer-events: none;"></canvas>
+                        <ul id="sidenav" class="nav flex-column">
+                            <li (click)="selected(0)" [ngClass]="{'selectMenuItem': selectedId === 0}"><a [routerLink]="'/home'" class="nav-link no-arrow">
+                                <span class="icon ic_navleft-1"></span>
+                                <span class="text">Dashboard</span></a>
+                             </li>
+
+                            <li>
+                                <a class="nav-link" data-toggle="collapse" [href]="'#dropdown-dm'" role="button" aria-expanded="false">
+                                    <span class="icon ic_navleft-4"></span>
+                                    <span class="text">Danh mục</span>
+                                </a>
+
+                                <ul class="collapse" [id]="'dropdown-dm'">
+                                    <li class="entity-menu" (click)="selected(1)" [ngClass]="{'selectMenuItem': selectedId === 2}">
+                                        <a routerLink="/danhmuc/main-article">Danh mục bài viết cha</a>
+                                    </li>
+                                </ul> 
+
+                                <ul class="collapse" [id]="'dropdown-dm'">
+                                    <li class="entity-menu" (click)="selected(2)" [ngClass]="{'selectMenuItem': selectedId === 2}">
+                                        <a routerLink="/danhmuc/child-article">Danh mục bài viết</a>
+                                    </li>
+                                </ul>                              
+                            </li>
+
+                            <li>
+                                <a class="nav-link" data-toggle="collapse" [href]="'#dropdown-bc'" role="button" aria-expanded="false">
+                                    <span class="icon ic_navleft-6"></span>
+                                    <span class="text">Hệ thống</span>
+                                </a>
+                                <ul class="collapse" [id]="'dropdown-bc'">
+                                    <li class="entity-menu" (click)="selected(3)" [ngClass]="{'selectMenuItem': selectedId === 10}">
+                                        <a routerLink="/danhmuc/backuplog">Log Backup</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </article>
+                <aside class="scrollbar-track scrollbar-track-x" style="display: none;">
+                    <div class="scrollbar-thumb scrollbar-thumb-x" style="width: 256px; transform: translate3d(0px, 0px, 0px);"></div>
+                </aside>
+                <aside class="scrollbar-track scrollbar-track-y" style="display: block;">
+                    <div class="scrollbar-thumb scrollbar-thumb-y" style="height: 109.002px; transform: translate3d(0px, 0px, 0px);"></div>
+                </aside>
+                <canvas class="overscroll-glow" style="display: none; pointer-events: none;"></canvas>
+            </div>
+           
+        </div>
+    </div>
+</div> 

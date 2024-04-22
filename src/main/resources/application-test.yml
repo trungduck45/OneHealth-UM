@@ -1,0 +1,10 @@
+server:
+  port: 8088
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:./PMM.db
+  jpa:
+    database-platform: com.vnptit.ehealth.docs.configurations.SQLiteDialect
+    hibernate:
+      ddl-auto: create

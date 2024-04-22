@@ -1,0 +1,7 @@
+{
+  "*": {
+    "target": "https://test-dreport.vncare.vn",
+    "secure": false,
+    "loglevel": "debug"
+  }
+}

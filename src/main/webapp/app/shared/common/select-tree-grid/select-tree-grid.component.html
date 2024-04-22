@@ -1,0 +1,9 @@
+<jqxDropDownButton #unitDropDownButton style="float: left"
+[height]="35" [width]="'100%'" [disabled]="creating || editing ? false: true">
+    <jqxTreeGrid #unitTreeGrid (onRowSelect)="selectParent($event)"
+    [source]="dataAdapter" [width]="466" [columns]="columns" 
+    [filterMode]="'simple'" [filterable]="true" 
+    [showHeader]="false"
+    >
+    </jqxTreeGrid>
+</jqxDropDownButton>

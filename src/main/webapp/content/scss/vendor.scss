@@ -1,0 +1,42 @@
+/* after changing this file run 'npm run webpack:build' */
+
+/***************************
+put Sass variables here:
+eg $input-color: red;
+****************************/
+// Override Bootstrap variables
+// @import 'bootstrap-variables';
+// Import Bootstrap source files from node_modules
+// @import '~bootstrap/scss/bootstrap';
+
+//-------------- start ic template css files
+@import '../css/bootstrap.min.css';
+@import '../css/animate.css';
+@import '../css/bootstrap-datepicker.min.css';
+@import '../css/bootstrap-grid.min.css';
+@import '../css/bootstrap-select.min.css';
+@import '../css/bootstrapValidator.min.css';
+
+@import '../css/checkbox.min.css';
+@import '../css/font-awesome-all.min.css';
+@import '../css/font-face.css';
+
+@import '../css/highcharts.css';
+@import '../css/hummingbird-treeview.min.css';
+@import '../css/nanoscroller.css';
+
+@import '../css/responsive.css';
+// @import '../css/smooth-scrollbar.css';
+@import '../css/styles.css';
+//--------------- end ic template css files
+
+// css for notification
+@import '~ngx-toastr/toastr.css';
+
+// --------------- start css customs
+@import 'vnpt-emr.scss';
+
+// --------------- jqx css
+@import '~jqwidgets-ng/jqwidgets/styles/jqx.base.css';
+// css for ng-select
+@import '~@ng-select/ng-select/themes/default.theme.css';

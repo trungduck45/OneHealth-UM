@@ -1,0 +1,26 @@
+<div class="form-group row text-center align-items-center">
+    <div class="col-sm-12">
+
+      <button type="button" class="btn btn-primary pr-3 pl-3 text-uppercase" [attr.disabled]=" editing || choosing || creating ? 'disabled' : null" (click)="onCreate.emit()">
+          <i class="fas fa-plus-circle mr-1"></i>
+          <span > Thêm</span>
+          <!-- <span > Add</span> -->
+      </button>
+      <button type="button" class="btn btn-primary pr-3 pl-3 text-uppercase" [attr.disabled]="choosing ? null: 'disabled'" (click)="onEdit.emit()">
+          <i class="fas fa-pencil mr-1"></i>
+          <span> Sửa</span>
+      </button>
+      <button type="button" class="btn btn-primary pr-3 pl-3 text-uppercase" [attr.disabled]="editing || creating ? null: 'disabled'" (click)="onSave.emit()">
+          <i class="fas fa-save mr-1"></i>
+          <span > Lưu</span>
+      </button>
+      <button type="button" class="btn btn-primary pr-3 pl-3 text-uppercase" [attr.disabled]="choosing || editing || creating ? null: 'disabled'" (click)="onCancel.emit()">
+          <i class="fas fa-times-circle mr-1"></i>
+          <span > Hủy</span>
+      </button>
+      <button type="button" class="btn btn-primary pr-3 pl-3 text-uppercase" [attr.disabled]="choosing ? null: 'disabled'" (click)="onDelete.emit()">
+          <i class="fas fa-trash mr-1"></i>
+          <span > Xóa</span>
+      </button>
+    </div>
+</div>

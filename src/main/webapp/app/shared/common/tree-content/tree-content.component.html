@@ -1,0 +1,13 @@
+<ng-container *ngFor="let item of hierarchicalList">
+  <div>
+    <p [ngStyle]="getStyle(item)">
+        <button type="button" class="btn btn-link" 
+        (click)="clickGoToElement(item.level, item.heading)">{{ item.heading }}</button>
+    </p>
+  </div>
+  <jhi-app-tree-content
+    *ngIf="item.children"
+    [hierarchicalList]="item.children"
+    (goDownToChildElement)="childGoDownToChildElement($event)"
+  ></jhi-app-tree-content>
+</ng-container>

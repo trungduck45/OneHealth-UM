@@ -1,0 +1,27 @@
+<div style="width: 100%;">
+  <div ngbDropdown class="row" #myDrop="ngbDropdown">
+    <input
+      id="article"
+      #articleSearchInput
+      placeholder="Tìm kiếm bài viết"
+      [(ngModel)]="searchPhase"
+      [formControl]="tourishPlanCtrl"
+      class="form-control"
+      type="text"
+      autocomplete="off"
+      (change)="output($event)"
+      (click)="showSearches = true; myDrop.open()"
+    />
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" style=" min-height: 35px; width: 100%;">
+      <h3 *ngIf="isSearchEmpty" style="font-size: 0.85rem; padding: 0 10px 0;; font-style: italic;">Vui lòng nhập nội dung tìm kiếm</h3>
+      <h3 *ngIf="!isSearchEmpty && searchedArticles.length <= 0" style="font-size: 0.85rem; padding: 0 10px 0;; font-style: italic;">Không có kết quả tìm kiếm phù hợp</h3>
+      <h3 *ngIf="!isSearchEmpty && searchedArticles.length > 0" style="font-size: 0.85rem; padding: 0 10px 0; font-style: italic;">Kết quả tìm kiếm phù hợp</h3>
+      <div *ngFor="let article of searchedArticles; trackBy: trackById">
+        <button ngbDropdownItem (click)="setArticleName(article)">
+          {{ article.name }}
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>

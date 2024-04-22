@@ -1,0 +1,314 @@
+.emr-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+@media screen and (max-width: 576px) {
+  #pcont {
+    left: 0px;
+  }
+  #sidebar {
+    display: none;
+  }
+  #notice-scrollbar {
+    margin-left: -100px;
+  }
+  #notice .dropdown-menu-md-right {
+    min-width: 200px;
+  }
+}
+.block {
+  display: block !important;
+}
+.tr-selected {
+  background-color: #0173b2 !important;
+  td {
+    color: white !important;
+    .link {
+      color: white !important;
+    }
+  }
+}
+input:disabled {
+  cursor: not-allowed;
+}
+select:disabled {
+  cursor: not-allowed;
+}
+.checknull {
+  color: red;
+}
+.fa-trash-alt {
+  cursor: pointer;
+  color: #0173b2;
+}
+// ---------- start customs size modal
+.hsbaModalClass .modal-dialog {
+  max-width: 1588px !important;
+}
+.hsbaModalClass-sm .modal-dialog {
+  max-width: 800px !important;
+}
+// ---------- end customs size modal
+// ---------- start customs scroll
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+// ------------- end customs scroll
+
+// ------------- start customs date
+.emr-date {
+  position: relative;
+  .emr-date-reset {
+    position: absolute;
+    top: -1px;
+    right: 25px;
+    opacity: 0.5;
+    font-size: 13px;
+  }
+  .btn:focus {
+    box-shadow: 0 0 0 0;
+  }
+}
+// ------------- end customs date
+// ------------- dữ liệu phiếu
+.card-header .glyphicon-chevron-down {
+  right: 20px;
+  position: absolute;
+}
+// ------------- start custom treegrid jqx
+.jqx-datatable {
+  width: 100% !important;
+  td {
+    border: 0px;
+  }
+  .jqx-widget-header {
+    background-color: #fff;
+    div {
+      color: #fff;
+    }
+    .jqx-input-group {
+      width: 100%;
+      height: 35px !important;
+      input {
+        width: 90% !important;
+        height: 28px !important;
+        border-radius: 5px 5px 5px 5px;
+      }
+      .jqx-fill-state-normal {
+        border-top-right-radius: 5px !important;
+        border-bottom-right-radius: 5px !important;
+        height: 28px !important;
+      }
+      .jqx-icon-search {
+        margin-top: 4px !important;
+      }
+    }
+  }
+}
+.jqx-grid-column-header div span {
+  color: #333333 !important;
+}
+/* CSS Document */
+
+.jqx-input-group-addon {
+  position: absolute;
+  right: 0;
+  background: #fff !important;
+  border-color: #fff !important;
+}
+.jqx-checkbox-check-checked {
+  background-image: url(../img/04990f816ab2f34fb96bf19781375758.png) !important;
+  border-color: #0173b2 !important;
+  background-color: #0173b2;
+}
+.jqx-icon-arrow-down {
+  background-image: url(../img/02e768df75da3412dea54658817e46d8.png) !important;
+}
+.jqx-icon-arrow-right {
+  background-image: url(../img/950ea4cd301a60fb486376b500ace6d9.png) !important;
+}
+.jqx-checkbox-check-indeterminate {
+  background-image: url(../img/ec184c090f284841a0cdc0ee6971c2bd.png) !important;
+}
+.jqx-grid-cell .jqx-tree-grid-indent {
+  height: 16px !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+.jqx-grid-cell .jqx-tree-grid-indent:first-child::before {
+  content: '';
+  width: 2px !important;
+  background: #e6f1f7 !important;
+  left: 8px !important;
+  margin-left: -1px;
+  top: -7px;
+  bottom: -7px;
+  position: absolute;
+  height: 40px;
+}
+.jqx-grid-cell .jqx-tree-grid-indent:first-child::after {
+  content: '';
+  width: 15px !important;
+  height: 2px;
+  background: #e6f1f7 !important;
+  left: 8px !important;
+  margin-left: -1px;
+  top: 8px;
+  position: absolute;
+}
+#jqxWidget4591552155f3.jqx-widget-content .jqx-grid-table,
+#jqxWidget4591552155f3.jqx-widget-content .jqx-grid-content.jqx-widget-content > div,
+#jqxWidget4591552155f3.jqx-widget-content .jqx-grid-cell {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.jqx-icon-search {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/4a678ee866316f1a2f89ba895ce2a868.png);
+}
+.jqx-datatable .jqx-widget-header .jqx-input-group input {
+  right: 30px !important;
+  left: 0 !important;
+}
+#jqxWidget4591552155f3.jqx-widget-content .jqx-input-group-addon {
+  right: 0;
+  width: 30px;
+  background: none !important;
+}
+.jqx-fill-state-normal.jqx-rc-r.jqx-input-group-addon,
+.jqx-rc-all.jqx-widget.jqx-input-group input,
+.jqx-datatable.jqx-grid.jqx-reset.jqx-rc-all.jqx-widget.jqx-widget-content {
+  background: none !important;
+  border: none !important;
+}
+.jqx-fill-state-pressed {
+  background-color: #fff;
+}
+.jqx-icon-close {
+  display: none !important;
+}
+// --------------  end custom treeGrid jqx
+// -------------- start custom dropdown view
+.jqx-dropdownlist-state-normal {
+  height: 30px;
+  width: 100% !important;
+  background: #f3f6ff !important;
+  border-color: #ced4da;
+}
+.jqx-fill-state-disabled {
+  background: #f3f6ff !important;
+}
+.jqx-fill-state-disabled {
+  opacity: 1 !important;
+  cursor: not-allowed;
+}
+.jqx-fill-state-focus {
+  border-color: #ced4da;
+}
+.jqx-widget-content {
+  font-family: 'OpenSans-Regular';
+}
+.jqx-dropdownlist-content {
+  padding-top: 5px;
+  padding-left: 12px;
+  font-size: 0.85rem;
+}
+// -------------- end custom dropdown view
+// -------------- start customs dashboard
+
+.highcharts-container {
+  border-radius: 10px;
+}
+.highcharts-root {
+  font-family: 'OpenSans-Regular' !important;
+  font-size: 12px !important;
+}
+.highcharts-title {
+  display: block !important;
+}
+// -------------- end customs dashboard
+
+// ------------- start notification
+li {
+  .readed {
+    background-color: #fff;
+    .notice-tl {
+      opacity: 0.5;
+    }
+    .notice-time {
+      opacity: 0.5;
+    }
+  }
+  .unread {
+    background-color: #fff;
+    position: relative;
+    .notice-time {
+      color: #0173b2 !important;
+    }
+    .fa-circle {
+      color: #08b3bb !important;
+      position: absolute;
+      top: 15px;
+      right: 5px;
+    }
+  }
+}
+// --------------- end notification
+
+.editor-container {
+  height: 500px !important;
+}
+
+// data table
+.row-group-custom {
+  height: 30px;
+  a {
+    cursor: pointer;
+  }
+}
+
+//jqx-tree
+.jqx-grid-cell-selected {
+  background-color: rgb(181, 181, 224);
+}
+
+//label
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label-success {
+  background-color: #5cb85c;
+}
+.label-danger {
+  background-color: #dc3545;
+}
+.label-warning {
+  background-color: #ffc107;
+}

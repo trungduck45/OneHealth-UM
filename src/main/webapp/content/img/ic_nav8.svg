@@ -1,0 +1,15 @@
+<svg id="ic_nav8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_22" data-name="Path 22" d="M.75,2A1.25,1.25,0,0,1,2,.75H22A1.25,1.25,0,0,1,23.25,2V15.25H.75Z" fill="none" stroke="#08b3bb" stroke-width="1.5"/>
+  <path id="Path_23" data-name="Path 23" d="M.75,17.75h22.5V22A1.25,1.25,0,0,1,22,23.25H2A1.25,1.25,0,0,1,.75,22Z" fill="none" stroke="#08b3bb" stroke-width="1.5"/>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="2" cy="2" r="2" transform="translate(10 7)" fill="none" stroke="#08b3bb" stroke-width="1.5"/>
+  <path id="Path_24" data-name="Path 24" d="M12,7V3" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="Path_25" data-name="Path 25" d="M12,13V11" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <circle id="Ellipse_3" data-name="Ellipse 3" cx="2" cy="2" r="2" transform="translate(21 9) rotate(180)" fill="none" stroke="#08b3bb" stroke-width="1.5"/>
+  <path id="Path_26" data-name="Path 26" d="M19,9v4" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="Path_27" data-name="Path 27" d="M19,3V5" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <circle id="Ellipse_4" data-name="Ellipse 4" cx="2" cy="2" r="2" transform="translate(7 9) rotate(180)" fill="none" stroke="#08b3bb" stroke-width="1.5"/>
+  <path id="Path_28" data-name="Path 28" d="M5,9v4" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="Path_29" data-name="Path 29" d="M3,20.5H15" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="Path_30" data-name="Path 30" d="M18,20.5h3" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+  <path id="Path_31" data-name="Path 31" d="M5,3V5" fill="none" stroke="#08b3bb" stroke-linecap="round" stroke-width="1.5"/>
+</svg>

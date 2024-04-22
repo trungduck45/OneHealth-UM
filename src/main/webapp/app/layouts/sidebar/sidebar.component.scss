@@ -1,0 +1,43 @@
+.selectMenuItem {
+  // background-color: #d0f0f2;
+  a {
+    color: #08b3bb !important;
+  }
+  span {
+    color: #08b3bb !important;
+  }
+}
+.icon-customs {
+  color: cadetblue;
+  font-size: 24px;
+  margin-left: 2px;
+}
+.collapse {
+  border-bottom: 0px !important;
+}
+.icon-bookmark {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: cadetblue;
+}
+.icon-bookmark.far.fa-star {
+  display: none;
+}
+.entity-menu:hover {
+  .icon-bookmark.far.fa-star {
+    display: block !important;
+  }
+}
+.entity-menu {
+  position: relative;
+  a {
+    font-weight: normal !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn-bar {
+    display: none;
+  }
+}
